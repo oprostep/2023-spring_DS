@@ -74,6 +74,24 @@ class LinkedList:
 			print("("+str(self.next())+") ->",end=' ')
 		print("("+str(self.next())+") -> null")
 
+	def insert_at(self, position, new_data):
+		if position<=0:
+			print("error")
+		elif position > self.num_of_data:
+			self.append(new_data)
+		else:
+			self.first()
+			for i in range(1,position):
+				self.next()
+			new_node = Node(new_data)
+			self.before.next = new_node
+			new_node.next = self.current
+		self.num_of_data += 1
+		
+
+		
+		
+
 list=LinkedList()
 list.append(1)
 list.append(2)
