@@ -68,7 +68,6 @@ class LinkedList:
 		return self.num_of_data
 	
 	def traverse_all(self):
-		
 		print("head -> ("+str(self.first())+") ->",end=' ')
 		while(self.current != self.tail):
 			print("("+str(self.next())+") ->",end=' ')
@@ -88,9 +87,18 @@ class LinkedList:
 			new_node.next = self.current
 		self.num_of_data += 1
 
-list=LinkedList()
-list.append(1)
-list.append(2)
-list.append(3)
-list.append(4)
-list.append(5)
+	def remove(self, key):
+		self.first()
+		KeyNotExist = True
+		count = 1
+		while(True):
+			if self.current.data == key:
+				KeyNotExist = False
+				self.delete()
+				print(str(count)+"번째 원소("+str(key)+")를 삭제합니다.")
+			if self.current == self.tail:
+				break
+			self.next()
+			count += 1
+		if KeyNotExist:
+			print("해당하는 원소가 없습니다.")
