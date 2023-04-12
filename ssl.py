@@ -70,9 +70,9 @@ class LinkedList:
 	def traverse_all(self):
 		
 		print("head -> ("+str(self.first())+") ->",end=' ')
-		while(self.current.next != self.tail):
+		while(self.current != self.tail):
 			print("("+str(self.next())+") ->",end=' ')
-		print("("+str(self.next())+") -> null")
+		print("null")
 
 	def insert_at(self, position, new_data):
 		if position<=0:
