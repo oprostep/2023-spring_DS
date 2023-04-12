@@ -67,12 +67,14 @@ class LinkedList:
 	def size(self):
 		return self.num_of_data
 	
+	# traverse_all 메소드
 	def traverse_all(self):
 		print("head -> ("+str(self.first())+") ->",end=' ')
 		while(self.current != self.tail):
 			print("("+str(self.next())+") ->",end=' ')
 		print("null")
 
+	# insert_at 메소드
 	def insert_at(self, position, new_data):
 		if position<=0:
 			print("error")
@@ -87,8 +89,10 @@ class LinkedList:
 			new_node.next = self.current
 		self.num_of_data += 1
 
+	# remove 메소드
 	def remove(self, key):
 		self.first()
+		#KeyNotExist를 통해 key가 없는 경우를 기록
 		KeyNotExist = True
 		count = 1
 		while(True):
