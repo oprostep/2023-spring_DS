@@ -87,10 +87,6 @@ class LinkedList:
 			self.before.next = new_node
 			new_node.next = self.current
 		self.num_of_data += 1
-		
-
-		
-		
 
 list=LinkedList()
 list.append(1)
