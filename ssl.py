@@ -1,3 +1,6 @@
+## 202104591 수학과 김하준
+## 정상동작
+
 # Node 클래스 정의
 class Node:
 	def __init__(self, data):
@@ -78,8 +81,10 @@ class LinkedList:
 	def insert_at(self, position, new_data):
 		if position<=0:
 			print("error")
+			return
 		elif position > self.num_of_data:
 			self.append(new_data)
+			return
 		else:
 			self.first()
 			for i in range(1,position):
